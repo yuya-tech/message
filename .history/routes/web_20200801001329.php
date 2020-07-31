@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MessagesController@index');
+Route::get('/', 'MessagesController＠index');
 
 Route::resource('messages', 'MessagesController');
