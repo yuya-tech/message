@@ -112,9 +112,6 @@ class MessagesController extends Controller
     //deleteでmessages/idにアクセスされた場合の削除処理
     public function destroy($id)
     {
-        $message = Message::find($id);
-        $message->delete();
-
-        return redirect('/');
+        //
     }
 }

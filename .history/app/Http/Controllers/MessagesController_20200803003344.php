@@ -96,11 +96,7 @@ class MessagesController extends Controller
     //putまたはpatch/id/editにアクセスされた場合の更新処理
     public function update(Request $request, $id)
     {
-        $message = Message::find($id);
-        $message->content = $request->content;
-        $message->save();
-
-        return redirect('/');
+        //
     }
 
     /**
@@ -112,9 +108,6 @@ class MessagesController extends Controller
     //deleteでmessages/idにアクセスされた場合の削除処理
     public function destroy($id)
     {
-        $message = Message::find($id);
-        $message->delete();
-
-        return redirect('/');
+        //
     }
 }

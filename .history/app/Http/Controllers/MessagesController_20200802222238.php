@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Message; //追加
-
 class MessagesController extends Controller
 {
     /**
@@ -16,11 +14,7 @@ class MessagesController extends Controller
     //getでmessages/にアクセスされた場合の一覧表示処理
     public function index()
     {
-        $messages = Message::all();
-
-        return view('messages.index', [
-            'messages' => $messages,
-        ]);
+        //
     }
 
     /**
@@ -31,11 +25,7 @@ class MessagesController extends Controller
     //getでmessages/createにアクセスされた場合の新規登録画面表示処理
     public function create()
     {
-        $message = new Message;
-
-        return view('messages.create', [
-            'message' => $message,
-        ]);
+        //
     }
 
     /**
@@ -47,11 +37,7 @@ class MessagesController extends Controller
     //getでmessages/にアクセスされた場合の新規登録処理
     public function store(Request $request)
     {
-        $message = new Message;
-        $message->content = $request->content;
-        $message->save();
-
-        return redirect('/');
+        //
     }
 
     /**
@@ -63,11 +49,7 @@ class MessagesController extends Controller
     //getでmessages/idにアクセスされた場合の所得表示処理
     public function show($id)
     {
-        $message = Message::find($id);
-
-        return view('messages.show', [
-            'message' => $message,
-        ]);
+        //
     }
 
     /**
@@ -79,11 +61,7 @@ class MessagesController extends Controller
     //getでmessages/id/editアクセスされた場合の更新画面表示処理
     public function edit($id)
     {
-        $message = Message::find($id);
-
-        return view('messages.edit', [
-            'message' => $message,
-        ]);
+        //
     }
 
     /**
@@ -96,11 +74,7 @@ class MessagesController extends Controller
     //putまたはpatch/id/editにアクセスされた場合の更新処理
     public function update(Request $request, $id)
     {
-        $message = Message::find($id);
-        $message->content = $request->content;
-        $message->save();
-
-        return redirect('/');
+        //
     }
 
     /**
@@ -112,9 +86,6 @@ class MessagesController extends Controller
     //deleteでmessages/idにアクセスされた場合の削除処理
     public function destroy($id)
     {
-        $message = Message::find($id);
-        $message->delete();
-
-        return redirect('/');
+        //
     }
 }

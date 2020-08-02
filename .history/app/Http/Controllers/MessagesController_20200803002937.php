@@ -79,11 +79,7 @@ class MessagesController extends Controller
     //getでmessages/id/editアクセスされた場合の更新画面表示処理
     public function edit($id)
     {
-        $message = Message::find($id);
-
-        return view('messages.edit', [
-            'message' => $message,
-        ]);
+        //
     }
 
     /**
@@ -96,11 +92,7 @@ class MessagesController extends Controller
     //putまたはpatch/id/editにアクセスされた場合の更新処理
     public function update(Request $request, $id)
     {
-        $message = Message::find($id);
-        $message->content = $request->content;
-        $message->save();
-
-        return redirect('/');
+        //
     }
 
     /**
@@ -112,9 +104,6 @@ class MessagesController extends Controller
     //deleteでmessages/idにアクセスされた場合の削除処理
     public function destroy($id)
     {
-        $message = Message::find($id);
-        $message->delete();
-
-        return redirect('/');
+        //
     }
 }
