@@ -11,7 +11,7 @@
         </tr>
         <tr>
             <th>タイトル</th>
-            <td>{{ $message->title }}</td>
+            <tb>{{ $message->title }}</tb>
         </tr>
         <tr>
             <th>メッセージ</th>

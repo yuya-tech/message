@@ -49,7 +49,7 @@ class MessagesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|max:191',
-            'content' => 'required|max:191',
+            'content' => 'required|max191',
         ]);
 
         $message = new Message;

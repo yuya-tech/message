@@ -49,11 +49,11 @@ class MessagesController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|max:191',
-            'content' => 'required|max:191',
+            'content' => 'required|max191',
         ]);
 
         $message = new Message;
-        $message->title = $request->title;
+        $message->title = $request->title
         $message->content = $request->content;
         $message->save();
 
@@ -108,7 +108,7 @@ class MessagesController extends Controller
         ]);
 
         $message = Message::find($id);
-        $message->title = $request->title;
+        $message->title = $request->title
         $message->content = $request->content;
         $message->save();
 
